@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.css";
+import { ProductMain } from './Components/ProductMain'
+import { ProductSide } from "./Components/ProductSide";
+import { SellerInfo } from "./Components/SellerInfo";
+import {LINKS, STRINGS} from './data.js'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.App}>
+      <div className={styles.container}>
+      <div className={styles.productMain}>
+      <ProductMain 
+        imgLink={LINKS.imgLink}
+        brand={'Toyota'}
+        descText={STRINGS.descText}
+        status='FEATURED'
+      />
+      </div>
+      <div className={styles.productSide}>
+      <ProductSide
+        price='₹ 6,000'
+        description='Pixel 3 | Pixel 4 | Pixel 3xl | Pixel 4xl - 64GB - 6 Month Warranty'
+        location='Tagore Garden, Delhi, Delhi'
+        date='26 Nov'
+      />
+      <SellerInfo
+        profilePic={LINKS.profileImg}
+        name='Ayush Srivastava'
+        memeberSince='Sep 2020'
+      />
+      </div>
+      </div>
     </div>
   );
 }
-
-export default App;

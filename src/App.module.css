@@ -1,0 +1,18 @@
+.App {
+  font-family: sans-serif;
+  background-color: #f3f4f6;
+}
+
+@media only screen and (min-width: 768px) {
+  .productMain {
+    width: 70%
+  }
+  .productSide {
+    width: 30%
+  }
+  .container {
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: row;
+  }
+}
