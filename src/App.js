@@ -1,4 +1,5 @@
 import styles from "./App.module.css";
+import { Form } from "./Components/Form";
 import { ProductMain } from './Components/ProductMain'
 import { ProductSide } from "./Components/ProductSide";
 import { SellerInfo } from "./Components/SellerInfo";
@@ -7,6 +8,11 @@ import {LINKS, STRINGS} from './data.js'
 export default function App() {
   return (
     <div className={styles.App}>
+      {true ? 
+      <div style={{display: 'flex', justifyContent:'center'}}>
+        <Form />
+      </div>
+      :
       <div className={styles.container}>
       <div className={styles.productMain}>
       <ProductMain 
@@ -29,7 +35,7 @@ export default function App() {
         memeberSince='Sep 2020'
       />
       </div>
-      </div>
+      </div>}
     </div>
   );
 }
